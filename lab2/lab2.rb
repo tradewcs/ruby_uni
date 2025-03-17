@@ -15,7 +15,7 @@ def main
   prompt = TTY::Prompt.new
 
   while true
-    choice = prompt.select("Choose an option", %w[Add_Song Edit_Song Delete_Song Search_Song Exit])
+    choice = prompt.select("Choose an option", %w[Add_Song Edit_Song Delete_Song Search_Song List_All Exit])
 
     case choice
     when "Add_Song"
@@ -53,14 +53,11 @@ def main
 
     when "Search_Song"
       keyword = prompt.ask("Search:")
-
       result = search_song(music_collection, keyword)
+			output_collection(result)
 
-			result.each do |title, details|
-				puts "\nSong: #{title}"
-				puts "Artists: #{details[:artists].join(', ')}"
-				puts "Genres; #{details[:genres].join(', ')}"
-			end
+		when "List_All"
+			output_collection(music_collection)
 
     when "Exit"
       break
