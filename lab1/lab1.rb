@@ -24,7 +24,15 @@ def delete_song(collection, title)
 end
 
 def search_song(collection, keyword)
-	collection.select { |title, details| title.to_s.include?(keyword) || details[:artists].any? { |artist| artist.include?(keyword) } }
+	collection.select { |title, details| title.to_s.downcase.include?(keyword.downcase) || details[:artists].any? { |artist| artist.downcase.include?(keyword.downcase) } }
+end
+
+def output_collection(collection)
+	collection.each do |title, details|
+		puts "\nSong: #{title}"
+		puts "Artists: #{details[:artists].join(', ')}"
+		puts "Genres: #{details[:genres].join(', ')}"
+	end
 end
 
 def save_to_json(collection, filename)
