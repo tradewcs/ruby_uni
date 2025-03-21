@@ -36,6 +36,7 @@ def output_collection(collection)
 end
 
 def save_to_json(collection, filename)
+	
 	File.write(filename, JSON.pretty_generate(collection))
 end
 
