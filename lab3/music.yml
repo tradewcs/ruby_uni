@@ -1,95 +1,118 @@
 ---
-:Сподіваюсь, з тобою все гаразд:
-  :artists:
+- !ruby/object:Song
+  title: Сподіваюсь, з тобою все гаразд
+  artists:
   - mistmorn
-  :genres:
+  genres:
   - post-punk
-:Танці:
-  :artists:
+- !ruby/object:Song
+  title: Танці
+  artists:
   - SadSvit
   - Sad Novelist
-  :genres:
+  genres:
   - post-punk
-:сам собі наказ:
-  :artists:
+- !ruby/object:Song
+  title: сам собі наказ
+  artists:
   - хейтспіч
   - Sad Novelist
-  :genres:
+  genres:
   - post-punk
   - punk-rock
-:хвора на любов:
-  :artists:
+- !ruby/object:Song
+  title: хвора на любов
+  artists:
   - vioria
-  :genres:
+  genres:
   - kitty-rock
-:То моє море:
-  :artists:
+- !ruby/object:Song
+  title: То моє море
+  artists:
   - ВІКА
-  :genres:
+  genres:
   - synthpop
-:Мовчати:
-  :artists:
+- !ruby/object:Song
+  title: Мовчати
+  artists:
   - Ірина Білик
   - Скрябін
-  :genres:
+  genres:
   - pop
-:Реквієм:
-  :artists:
+- !ruby/object:Song
+  title: Реквієм
+  artists:
   - postluv
   - Sad Novelist
   - Відчай
-  :genres:
+  genres:
   - pop
-:Десять причин:
-  :artists:
+- !ruby/object:Song
+  title: Десять причин
+  artists:
   - OTOY
-  :genres:
+  genres:
   - rap
-:Загублене літо:
-  :artists:
+- !ruby/object:Song
+  title: Загублене літо
+  artists:
   - Electrobirds
-  :genres:
+  genres:
   - post-punk
-:Файна:
-  :artists:
+- !ruby/object:Song
+  title: Файна
+  artists:
   - Міша Правильний
-  :genres:
+  genres:
   - rap
-:Де Твоя Лінія:
-  :artists:
+- !ruby/object:Song
+  title: Де Твоя Лінія
+  artists:
   - Лінія Маннергейма
-  :genres:
+  genres:
   - rock
-:30:
-  :artists:
+- !ruby/object:Song
+  title: '30'
+  artists:
   - DK Energetyk
-  :genres:
+  genres:
   - post-punk
-:Пластик:
-  :artists:
+- !ruby/object:Song
+  title: Пластик
+  artists:
   - паліндром
-  :genres:
+  genres:
   - alt-rock
   - post-punk
-:Тління:
-  :artists:
+- !ruby/object:Song
+  title: Тління
+  artists:
   - Sad Novelist
   - SadSvit
-  :genres:
+  genres:
   - post-punk
-:Auslander:
-  :artists:
+- !ruby/object:Song
+  title: Auslander
+  artists:
   - Rammstein
-  :genres:
+  genres:
   - rock
   - metal
-:Faint:
-  :artists:
-  - Linking Park
-  :genres:
+- !ruby/object:Song
+  title: Faint
+  artists:
+  - Linkin Park
+  genres:
   - rock
-:Blood // Water:
-  :artists:
+- !ruby/object:Song
+  title: Blood // Water
+  artists:
   - grandson
-  :genres:
+  genres:
   - rock
+- !ruby/object:Song
+  title: tst
+  artists:
+  - t
+  genres:
+  - t
