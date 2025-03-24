@@ -1,118 +1,100 @@
 ---
-- !ruby/object:Song
-  title: Сподіваюсь, з тобою все гаразд
+- title: Сподіваюсь, з тобою все гаразд
   artists:
   - mistmorn
   genres:
   - post-punk
-- !ruby/object:Song
-  title: Танці
+- title: Танці
   artists:
   - SadSvit
   - Sad Novelist
   genres:
   - post-punk
-- !ruby/object:Song
-  title: сам собі наказ
+- title: сам собі наказ
   artists:
   - хейтспіч
   - Sad Novelist
   genres:
   - post-punk
   - punk-rock
-- !ruby/object:Song
-  title: хвора на любов
+- title: хвора на любов
   artists:
   - vioria
   genres:
   - kitty-rock
-- !ruby/object:Song
-  title: То моє море
+- title: То моє море
   artists:
   - ВІКА
   genres:
   - synthpop
-- !ruby/object:Song
-  title: Мовчати
+- title: Мовчати
   artists:
   - Ірина Білик
   - Скрябін
   genres:
   - pop
-- !ruby/object:Song
-  title: Реквієм
+- title: Реквієм
   artists:
   - postluv
   - Sad Novelist
   - Відчай
   genres:
   - pop
-- !ruby/object:Song
-  title: Десять причин
+- title: Десять причин
   artists:
   - OTOY
   genres:
   - rap
-- !ruby/object:Song
-  title: Загублене літо
+- title: Загублене літо
   artists:
   - Electrobirds
   genres:
   - post-punk
-- !ruby/object:Song
-  title: Файна
+- title: Файна
   artists:
   - Міша Правильний
   genres:
   - rap
-- !ruby/object:Song
-  title: Де Твоя Лінія
+- title: Де Твоя Лінія
   artists:
   - Лінія Маннергейма
   genres:
   - rock
-- !ruby/object:Song
-  title: '30'
+- title: '30'
   artists:
   - DK Energetyk
   genres:
   - post-punk
-- !ruby/object:Song
-  title: Пластик
+- title: Пластик
   artists:
   - паліндром
   genres:
   - alt-rock
   - post-punk
-- !ruby/object:Song
-  title: Тління
+- title: Тління
   artists:
   - Sad Novelist
   - SadSvit
   genres:
   - post-punk
-- !ruby/object:Song
-  title: Auslander
+- title: Auslander
   artists:
   - Rammstein
   genres:
   - rock
   - metal
-- !ruby/object:Song
-  title: Faint
+- title: Faint
   artists:
   - Linkin Park
   genres:
   - rock
-- !ruby/object:Song
-  title: Blood // Water
+- title: Blood // Water
   artists:
   - grandson
   genres:
   - rock
-- !ruby/object:Song
-  title: tst
+- title: tst
   artists:
-  - t
+  - '32'
   genres:
-  - t
+  - '4'

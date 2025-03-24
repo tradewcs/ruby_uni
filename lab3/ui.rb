@@ -6,14 +6,14 @@ class MusicCollectionManager
     @file_path = file_path
 
     @music_collection = MusicCollection.new
-    @music_collection.songs = @music_collection.load_from_yaml(file_path)
+    @music_collection.load_from_yaml(file_path)
 
     @prompt = TTY::Prompt.new
   end
 
   def run
     loop do
-      choice = @prompt.select("Choose an option", %w[Add_Song Edit_Song Delete_Song Search_Song List_All Exit])
+      choice = @prompt.select("\nChoose an option", %w[Add_Song Edit_Song Delete_Song Search_Song List_All Exit])
 
       case choice
       when "Add_Song"
@@ -77,6 +77,8 @@ class MusicCollectionManager
   end
 
   def list_all_songs
+    p "There no songs in collection" if @music_collection.songs.empty?
+      
     @music_collection.output_collection
   end
 end

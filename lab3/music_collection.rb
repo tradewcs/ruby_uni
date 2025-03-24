@@ -56,7 +56,10 @@ class MusicCollection
   end
 
   def save_to_yaml(filename)
-    File.write(filename, @songs.to_yaml)
+    data = @songs.map do |song|
+      { 'title' => song.title, 'artists' => song.artists, 'genres' => song.genres }
+    end
+    File.write(filename, data.to_yaml)
   end
 
   def load_from_yaml(filename)
@@ -66,6 +69,15 @@ class MusicCollection
       Song.new(title, details['artists'], details['genres'])
     end
   end
+
+  def load_from_yaml(filename)
+    data = YAML.load_file(filename) rescue []
+
+    @songs = data.map do |song|
+      Song.new(song['title'], song['artists'], song['genres'])
+    end
+  end
+
 end
 
 def main
