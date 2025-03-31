@@ -1,0 +1,17 @@
+<h1>Songs</h1>
+
+<%= link_to 'Add New Song', new_song_path %><br><br>
+
+<%= link_to 'Add New Artist', new_artist_path, class: 'btn btn-primary' %> | 
+<%= link_to 'Add New Genre', new_genre_path, class: 'btn btn-primary' %>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <strong><%= song.title %></strong><br>
+      Artists: <%= song.artists.map(&:name).join(', ') %><br>
+      Genres: <%= song.genres.map(&:name).join(', ') %>
+    </li>
+  <% end %>
+</ul>
+
