@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <%= javascript_importmap_tags %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+
     <title><%= content_for(:title) || "Lab4" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,7 +27,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+    <body>
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,4 +1,4 @@
-class CreateJoinTablesGenresSongs < ActiveRecord::Migration[8.0]
+class CreateJoinTablesGenresSongs < ActiveRecord::Migration[7.1]
   def change
     create_join_table :genres, :songs do |t|
         t.index :genre_id
