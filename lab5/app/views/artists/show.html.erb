@@ -3,4 +3,6 @@
 <p><strong>Name:</strong> <%= @artist.name %></p>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back to List', artists_path %>
+<%= link_to 'Back to List', artists_path %> |
+<%= link_to 'Delete', artist_path(@artist), method: :delete %> @
+<%= button_to "Destroy this artist", @artist, method: :delete %>
