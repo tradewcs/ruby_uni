@@ -1,6 +1,11 @@
 class SongsController < ApplicationController
+  include SearchSortable
+
   def index
     @songs = Song.all
+    @songs = search_records(@songs, %w[title]) # Add fields you want searchable
+    @songs = sort_records(@songs, 'title')     # Default sort column
+    @songs = @songs.page(params[:page]).per(10) # Kaminari pagination (10 per page)
   end
 
   def show
