@@ -1,4 +1,4 @@
-<h1 class="fancy-title">New Genre</h1>
+<h1 class="fancy-title">Edit Genre</h1>
 
 <%= form_with(model: @genre, local: true) do |form| %>
   <% if @genre.errors.any? %>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit 'Create Genre', class: "submit-button" %>
+    <%= form.submit 'Update Genre', class: "submit-button" %>
   </div>
 <% end %>
 

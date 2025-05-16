@@ -1,13 +1,12 @@
-<h1>Genres</h1>
+<h1 class="fancy-title">Genres</h1>
 
-<%= link_to 'Add New Genre', new_genre_path %>
+<%= link_to 'Add New Genre', new_genre_path, class: "fancy-link" %>
+<br><br>
 
 <ul>
   <% @genres.each do |genre| %>
-    <li><%= genre.name %></li>
+    <li class="fancy-list"><span class="fancy-text"><%= genre.name %></span></li>
   <% end %>
 </ul>
 
-<%= link_to 'Home', songs_path%>
-
-
+<%= link_to 'Home', songs_path, class: "back-link" %>

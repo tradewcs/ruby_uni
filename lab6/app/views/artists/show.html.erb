@@ -1,8 +1,7 @@
-<h1><%= @artist.name %></h1>
+<h1 class="fancy-title"><%= @artist.name %></h1>
 
-<p><strong>Name:</strong> <%= @artist.name %></p>
+<p class="fancy-text"><strong>Name:</strong> <%= @artist.name %></p>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back to List', artists_path %> |
-<%= link_to 'Delete', artist_path(@artist), method: :delete %> @
-<%= button_to "Destroy this artist", @artist, method: :delete %>
+<%= link_to 'Edit', edit_artist_path(@artist), class: "fancy-link" %>
+<%= link_to 'Back to List', artists_path, class: "back-link" %>
+<%= link_to 'Delete', artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" }, class: "fancy-link" %>

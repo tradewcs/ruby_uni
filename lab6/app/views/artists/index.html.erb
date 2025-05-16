@@ -1,18 +1,17 @@
-<h1>Artists</h1>
+<h1 class="fancy-title">Artists</h1>
 
-<%= link_to 'Add New Artist', new_artist_path %>
+<%= link_to 'Add New Artist', new_artist_path, class: "fancy-link" %>
+<br><br>
 
 <ul>
   <% @artists.each do |artist| %>
-    <li>
-      <%= artist.name %>
+    <li class="fancy-list">
+      <span class="fancy-text"><%= artist.name %></span>
       <%= link_to 'Show', artist_path(artist) %>
-      |
       <%= link_to 'Edit', edit_artist_path(artist) %>
-      |
-      <%= link_to 'Delete', artist_path(artist), method: :delete %>
+      <%= link_to 'Delete', artist_path(artist), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to 'Home', songs_path %>
+<%= link_to 'Home', songs_path, class: "back-link" %>

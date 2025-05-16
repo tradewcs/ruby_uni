@@ -1,10 +1,9 @@
-<h1>Edit Artist</h1>
+<h1 class="fancy-title">Edit Artist</h1>
 
-<%= form_for @artist do |f| %>
+<%= form_with(model: @artist, local: true) do |form| %>
   <% if @artist.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="error-box">
       <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
-
       <ul>
         <% @artist.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -14,13 +13,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= form.label :name, class: "label" %>
+    <%= form.text_field :name, class: "input-field" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update Artist" %>
+    <%= form.submit 'Update Artist', class: "submit-button" %>
   </div>
 <% end %>
 
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Back to Artists List', artists_path, class: "back-link" %>
