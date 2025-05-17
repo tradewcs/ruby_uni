@@ -1,0 +1,25 @@
+<%= form_with url: songs_path, method: :get, local: true do %>
+  <%= label_tag :search, "Search" %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= link_to "Title", songs_path(sort: 'title', direction: sort_direction == 'asc' ? 'desc' : 'asc', search: params[:search]) %></th>
+      <!-- Add other columns as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><%= song.title %></td>
+        <!-- Add other columns as needed -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @songs %>
+

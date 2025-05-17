@@ -1,0 +1,35 @@
+<h1 class="fancy-title">Edit Song</h1>
+
+<%= form_with(model: @song, local: true) do |form| %>
+  <% if @song.errors.any? %>
+    <div id="error_explanation" class="error-box">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+      <ul>
+        <% @song.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input-field" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artists, class: "label" %><br>
+    <%= form.collection_check_boxes :artist_ids, @artists, :id, :name, { class: "input-field" }, { class: "checkbox" } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genres, class: "label" %><br>
+    <%= form.collection_check_boxes :genre_ids, @genres, :id, :name, { class: "input-field" }, { class: "checkbox" } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Update Song', class: "submit-button" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Songs List', songs_path, class: "back-link" %>
