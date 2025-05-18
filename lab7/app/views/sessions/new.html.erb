@@ -1,0 +1,10 @@
+<h1>Login (Demo)</h1>
+<%= form_with url: sessions_path, method: :post, local: true do |form| %>
+  <div>
+    <%= form.label :user_id, "User ID (any number):" %>
+    <%= form.number_field :user_id, required: true %>
+  </div>
+  <div>
+    <%= form.submit "Log In" %>
+  </div>
+<% end %>

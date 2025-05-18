@@ -3,7 +3,6 @@ require 'ostruct'
 class ApplicationController < ActionController::Base
   include Pundit::Authorization
 
-  # Optional: handle unauthorized access gracefully
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
@@ -14,9 +13,16 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    nil
-
-    # OpenStruct.new(id: 2, email: "filipchuk@chnu.edu.ua")
+    if session[:user_id]
+      email = "user#{session[:user_id]}@test.com"
+      OpenStruct.new(
+        id: session[:user_id],
+        email: email,
+        admin: (email == "user57@test.com")
+      )
+    else
+      nil
+    end
   end
 
   helper_method :current_user

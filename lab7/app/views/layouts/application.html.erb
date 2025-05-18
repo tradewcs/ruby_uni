@@ -27,6 +27,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <% if current_user %>
+    Logged in as <%= current_user.email %>
+    <% if current_user.admin %>
+      | <strong>Admin</strong>
+    <% end %>
+    | <%= link_to 'Logout', logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Login', login_path %>
+  <% end %>
+
     <body>
       <% if flash[:notice] %>
         <div class="alert alert-success">

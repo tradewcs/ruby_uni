@@ -3,7 +3,8 @@ class ArtistsController < ApplicationController
 
   def index
     if params[:q].present?
-      @artists = Artist.where('name ILIKE ?', "%#{params[:q]}%")
+      query = "%#{params[:q].downcase}%"
+      @artists = Artist.where("LOWER(name) LIKE ?", query)
     else
       @artists = Artist.all
     end

@@ -1,7 +1,8 @@
 class GenresController < ApplicationController
   def index
     if params[:q].present?
-      @genres = Genre.where('name ILIKE ?', "%#{params[:q]}%")
+      query = "%#{params[:q].downcase}%"
+      @genres = Genre.where("LOWER(name) LIKE ?", query)
     else
       @genres = Genre.all
     end

@@ -44,6 +44,10 @@ class SongsController < ApplicationController
     end
   end
 
+  def destroy?
+    user&.admin
+  end
+  
   def destroy
     authorize @song
     @song.destroy

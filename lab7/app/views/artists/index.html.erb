@@ -1,8 +1,8 @@
 <h1 class="fancy-title">Artists</h1>
 
-<%= form_with url: artists_path, method: :get, local: true do |form| %>
+<%= form_with url: artists_path, method: :get, local: true, html: {class: "search-bar-container"} do |form| %>
   <%= form.label :q, "Search by artist name:" %>
-  <%= form.text_field :q, value: params[:q] %>
+  <%= form.text_field :q, value: params[:q], placeholder: "Enter artist name..." %>
   <%= form.submit "Search" %>
 <% end %>
 
@@ -10,9 +10,11 @@
   <% @artists.each do |artist| %>
     <li class="fancy-list">
       <span class="fancy-text"><%= artist.name %></span>
-      <%= link_to 'Show', artist_path(artist) %>
-      <%= link_to 'Edit', edit_artist_path(artist) %>
-      <%= link_to 'Delete', artist_path(artist), method: :delete, data: { confirm: "Are you sure?" } %>
+      <div class="artist-actions" style="margin-top: 0.5em;">
+        <%= link_to 'Show', artist_path(artist), class: "btn btn-show" %>
+        <%= link_to 'Edit', edit_artist_path(artist), class: "btn btn-edit" %>
+        <%= link_to 'Delete', artist_path(artist), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-delete" %>
+      </div>
     </li>
   <% end %>
 </ul>
