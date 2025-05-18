@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
 
     # OpenStruct.new(id: 2, email: "filipchuk@chnu.edu.ua")
   end
-  
+
   helper_method :current_user
 end
-

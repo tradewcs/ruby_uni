@@ -1,7 +1,10 @@
 <h1 class="fancy-title">Genres</h1>
 
-<%= link_to 'Add New Genre', new_genre_path, class: "fancy-link" %>
-<br><br>
+<%= form_with url: genres_path, method: :get, local: true do |form| %>
+  <%= form.label :q, "Search by genre name:" %>
+  <%= form.text_field :q, value: params[:q] %>
+  <%= form.submit "Search" %>
+<% end %>
 
 <ul>
   <% @genres.each do |genre| %>

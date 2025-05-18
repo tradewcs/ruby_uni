@@ -1,7 +1,10 @@
 <h1 class="fancy-title">Artists</h1>
 
-<%= link_to 'Add New Artist', new_artist_path, class: "fancy-link" %>
-<br><br>
+<%= form_with url: artists_path, method: :get, local: true do |form| %>
+  <%= form.label :q, "Search by artist name:" %>
+  <%= form.text_field :q, value: params[:q] %>
+  <%= form.submit "Search" %>
+<% end %>
 
 <ul>
   <% @artists.each do |artist| %>

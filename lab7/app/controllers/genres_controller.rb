@@ -1,6 +1,10 @@
 class GenresController < ApplicationController
   def index
-    @genres = Genre.all
+    if params[:q].present?
+      @genres = Genre.where('name ILIKE ?', "%#{params[:q]}%")
+    else
+      @genres = Genre.all
+    end
   end
 
   def new

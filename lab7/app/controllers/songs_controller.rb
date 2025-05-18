@@ -2,7 +2,14 @@ class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index
-    @songs = policy_scope(Song)
+    if params[:q].present?
+      query = "%#{params[:q].downcase}%"
+      @songs = Song.joins(:artists)
+        .where("LOWER(songs.title) LIKE ? OR LOWER(artists.name) LIKE ?", query, query)
+        .distinct
+    else
+      @songs = Song.all
+    end
   end
 
   def show
